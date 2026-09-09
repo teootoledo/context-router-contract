@@ -8,7 +8,7 @@ This repository uses a trunk-based development flow with automated, semantic-rel
 2. Open a pull request. CI runs the test suite and lints your commits.
 3. Commits must follow [Conventional Commits](https://www.conventionalcommits.org/): `<type>(<scope>): <description>`, e.g. `fix: handle empty file list`, `feat: add X`, `docs: update README`. A commitlint check on the PR enforces this.
 4. Once CI passes, the PR is squash-merged into `main` — one conventional-commit-formatted message per merge.
-5. Merging to `main` triggers an automated release: semantic-release inspects the commit(s) since the last release, computes the next version (patch/minor/major per Conventional Commits), updates `CHANGELOG.md`, tags the release, publishes a GitHub Release, and publishes the package to npm under the `@teootoledo` scope.
+5. Merging to `main` triggers an automated release: semantic-release inspects the commit(s) since the last release, computes the next version (patch/minor/major per Conventional Commits), tags the release, publishes a GitHub Release (with generated release notes), and publishes the package to npm under the `@teootoledo` scope. Release notes live on the GitHub Releases page, not in a committed `CHANGELOG.md` — `main` is protected against direct pushes (including from automation), so the release step never writes back to the branch.
 
 ## Commit types that drive releases
 

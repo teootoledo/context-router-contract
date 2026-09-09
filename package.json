@@ -1,6 +1,7 @@
 {
   "name": "@teootoledo/context-router-contract",
   "version": "0.1.1",
+  "engines": { "node": ">=22.13.0" },
   "description": "Shared zod schema for the context-router wire contract between the daemon and backend packages.",
   "license": "MIT",
   "type": "module",
